@@ -9,3 +9,9 @@ variable "region" {
   type        = string
   default     = "us-central1"
 }
+
+variable "db_password" {
+  description = "Application database password (supplied via TF_VAR_db_password / secret manager)."
+  type        = string
+  sensitive   = true
+}
